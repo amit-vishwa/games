@@ -83,13 +83,13 @@ holdButton.addEventListener('click', () => {
       dice.classList.add('hidden');
     }
 
-    // Switch to next player
-    switchPlayer();
+    // Switch only while the game is still active.
+    if (playing) switchPlayer();
   }
 });
 
 newButton.addEventListener('click', init);
 
 backButton.addEventListener('click', () =>
-  window.location.replace('/index.html')
+  window.location.replace('../index.html')
 );
